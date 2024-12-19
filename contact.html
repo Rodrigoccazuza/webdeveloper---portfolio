@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Limelight&family=Averia+Serif+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black; /* Ensures the entire body has a black background */
+            color: white; /* Optional: ensures text is readable */
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav a {
+            font-family: "Audiowide", sans-serif;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+
+        /* Headline */
+        .headline {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .headline h1 {
+            font-family: "Limelight", sans-serif;
+            font-size: 5rem;
+            color: rgba(24, 221, 0, 1);
+        }
+
+        .headline .together {
+            font-family: "Audiowide", sans-serif;
+            color: rgba(170, 82, 247, 1);
+            font-size: 6rem;
+        }
+
+        /* Form Section */
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: black; /* Overrides text color inside the form container */
+        }
+
+        .form-container h3 {
+            font-family: "Limelight", sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .form-container p {
+            font-family: "Averia Serif Libre", serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        form label {
+            font-family: "Limelight", sans-serif;
+            color: rgba(105, 107, 239, 1);
+            margin-top: 1rem;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            display: none;
+            text-align: center;
+            font-family: "Limelight", sans-serif;
+            font-size: 5rem;
+            color: black;
+        }
+      
+        /* Video and Map Styling */
+        .embed-responsive {
+            margin: 20px auto;
+            border-radius: 50px;
+        }
+
+         iframe.map {
+            width: 100%;
+            height: 350px;
+            border-radius: 50px;
+        }
+
+        
+        /* Footer */
+        footer {
+            background-color: rgba(170, 82, 247, 1);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            font-family: "Audiowide", sans-serif;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: green;
+        }
+
+        footer img {
+            height: 30px;
+        }
+
+        /*cookies*/
+        .cookies-msg{
+            width: 80%;
+            background-color:black;
+            position: fixed;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 15px;
+            display: none;
+        }
+
+        .cookies-msg.show{
+            display: block;
+        }
+
+        .cookies-msg .cookies-txt{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cookies-msg .cookies-btn{
+            margin-left: 30px;
+
+        }
+
+        .cookies-msg .cookies-btn button{
+            background-color:"black";
+            color:  rgba(170, 82, 247, 1);
+            font-weight: 700;
+            font-size: 18px;
+            padding: 10px 40px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .cookies-msg .cookies-btn button:hover{
+            transform: scale(0.9);
+
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/home_assets/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="newportfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 ms-3">
+                    <a href="https://www.instagram.com/rodrigoccazuza/"><img src="assets/home_assets/social_media/igvector.svg" alt="Instagram"></a>
+                    <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/gitvector.svg" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Headline -->
+    <div class="headline">
+        <h1>Let's Work</h1>
+        <h2 class="together">Together</h2>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container form-container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Let's Talk</h3>
+                <p>WI’d love to hear from you! Reach out to us for any inquiries or collaborations.</p>
+                <h3>Email</h3>
+                <p>
+                    📧 cazuza_carvalho@hotmail.com
+                    
+                    </p>
+                <h3>Socials</h3>
+                <p>Follow us on Instagram, Twitter, and LinkedIn.</p>
+                <a href="https://www.instagram.com/rodrigoccazuza/"><img src="assets/home_assets/social_media/igvector.svg" alt="Instagram"></a>
+                <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/gitvector.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="col-md-6" class="contact">
+                <form action="submit_form.php" method="post" id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Your full name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your email address" required>
+                    
+                    <label for="services">Services you're interested in</label>
+                    <select id="services" class="form-select" required>
+                        <option value="">Select a service</option>
+                        <option value="web_design">Web Design</option>
+                        <option value="ux_ui">UX/UI Design</option>
+                        <option value="seo">SEO Optimization</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Your message or project details" required></textarea>
+                    
+                    <button class="btn mt-3" type="submit" class="btn btn-warning" onclick="sendMessage()">Send Message</button>
+                </form>
+                
+            </div>
+            <div class="result" id="result">
+                <h2>Thank you for contacting us!</h2>
+                <p><strong>Name:</strong> <span id="resultname"></span></p>
+                <p><strong>Email:</strong> <span id="resultemail"></span></p>
+                <p><strong>Services</strong> <span id="resultservices"></span></p>  
+                <p><strong>Message:</strong> <span id="resultmessage"></span></p>
+                
+            </div>
+        </div>
+    </div>
+
+   <!-- Map Section -->
+   <div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="location">This is our location</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.932637820569!2d-74.00601568459802!3d40.7127753793318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316abfdf3b%3A0x1f5e0db9634e63ed!2sNew%20York%20City%2C%20NY!5e0!3m2!1sen!2sus!4v1679313811162!5m2!1sen!2sus" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <a href="index.html">Home</a>
+                    <a href="newportfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <img src="assets/home_assets/logo.png" alt="Logo">
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/footer_icons/Vector copy.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/footer_icons/akar-icons_github-fill.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookies-msg" id="cookies-msg">
+        <div class="cookies-txt">
+            <p> This website uses cookies to improve your browsing experience, analyze site traffic, and understand how visitors interact with the site. Cookies are small files stored on your device to help us enhance functionality and deliver relevant content. By continuing to use this website, you consent to the use of cookies. For more details, please read our Privacy Policy.</p>
+            
+            <div class="cookies-btn">
+                <button onclick="agree()">Agree</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>

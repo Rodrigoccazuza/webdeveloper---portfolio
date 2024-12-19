@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Limelight&family=Averia+Serif+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+   
+    <style>
+        body {
+            background-color: black; /* Ensures the entire body has a black background */
+            color: white; /* Optional: ensures text is readable */
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav a {
+            font-family: "Audiowide", sans-serif;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+        /* Portfolio Title */
+        #portfolio {
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 10rem;
+            color: rgba(24, 221, 0, 1);
+            font-family: "Limelight", sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            #portfolio {
+                font-size: 6rem; /* Responsive font size for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #portfolio {
+                font-size: 4rem; /* Responsive font size for mobile devices */
+            }
+        }
+
+        /* Project Cards */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .projectcards {
+            background: #2a2a2a;
+            border: 2px solid green;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .projectcards:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .projectnumber {
+            font-size: 2rem;
+            color: green;
+        }
+
+        .projecttitle {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .projectparagraph {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        img.cardicon {
+            width: 100px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(170, 82, 247, 1);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            font-family: "Audiowide", sans-serif;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: green;
+        }
+
+        footer img {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/home_assets/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="newportfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 ms-3">
+                    <a href="https://www.instagram.com/rodrigoccazuza/"><img src="assets/home_assets/social_media/igvector.svg" alt="Instagram"></a>
+                    <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/gitvector.svg" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <main>
+        <h1 id="portfolio">Portfolio</h1>
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <a href="projectone.html">
+                <div class="projectcards">
+                    <h2 class="projectnumber">1.</h2>
+                    <img src="/assets/Report_checking.png" alt="icon" class="cardicon">
+                    <h3 class="projecttitle">Prisma Providers</h3>
+                    <p class="projectparagraph">Prisma Provider offers digital immigration services, specializing in assisting immigrants with USCIS forms and processes.</p>
+                </div>
+            </a>
+            <!-- Card 2 -->
+            <a href="projectone copy.html">
+                <div class="projectcards">
+                    <h2 class="projectnumber">2.</h2>
+                    <img src="/assets/Report_checking.png" alt="icon" class="cardicon">
+                    <h3 class="projecttitle">Recipe Website</h3>
+                    <p class="projectparagraph">This is a dynamic, minimalist webpage created using HTML, CSS, and JavaScript, with the Bootstrap framework incorporated to demonstrate responsiveness and design clarity..</p>
+                </div>
+            </a>
+          
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <a href="index.html">Home</a>
+                    <a href="newportfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <img src="assets/home_assets/logo.png" alt="Logo">
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/footer_icons/Vector copy.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/footer_icons/akar-icons_github-fill.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

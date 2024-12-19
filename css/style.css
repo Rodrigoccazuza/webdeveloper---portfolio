@@ -1,0 +1,266 @@
+
+.body{
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: green;
+}
+
+/* Navbar */
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav a {
+    font-family: "Audiowide", sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+}
+/* Portfolio Title */
+#portfolio {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 10rem;
+    color: rgba(24, 221, 0, 1);
+    font-family: "Limelight", sans-serif;
+}
+
+@media (max-width: 768px) {
+    #portfolio {
+        font-size: 6rem; /* Responsive font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #portfolio {
+        font-size: 4rem; /* Responsive font size for mobile devices */
+    }
+}
+
+/* Project Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.projectcards {
+    background: #2a2a2a;
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projectcards:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5);
+}
+
+.projectnumber {
+    font-size: 2rem;
+    color: green;
+}
+
+.projecttitle {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.projectparagraph {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img.cardicon {
+    width: 100px;
+    height: auto;
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(170, 82, 247, 1);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    color: green;
+}
+
+footer img {
+    height: 30px;
+}
+
+
+
+/* -----------projects page--------------*/
+
+.project_title{
+    color:rgba(170, 82, 247, 1);
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.project_description, .project_tools, .project_guides{
+    color: rgba(24, 221, 0, 1);
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 2% 0;
+    text-align: center;
+}
+
+.propara{
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.toolsrow .row1, .toolsrow .row2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.toolsrow img{
+    max-width: 100px;
+}
+
+/* Carousel Styles */
+.carousel-inner img {
+    margin-top: 20px;
+    width: 60%;
+    height: 60%;
+}
+
+.wireframes{
+    color: rgba(24, 221, 0, 1);
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.evolution{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5%;
+}
+
+.evolution img{
+    width: 100%;
+}
+
+button{
+   
+   text-align: center;
+    background-color: rgba(105, 107, 239, 1);
+    border-radius: 39px;
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    padding: 10px 50px;
+    margin-top: 5%;
+}
+
+button:hover {
+    background-color: rgba(24, 221, 0, 1);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(170, 82, 247, 1);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    color: green;
+}
+
+footer img {
+    height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project_title{
+        font-size: 4rem;
+    }
+
+    .project_description, .project_tools, .project_guides{
+        font-size: 2rem;
+    }
+
+    .toolsrow img{
+        max-width: 70px;
+    }
+
+    .evolution img{
+        max-width: 100%;
+    }
+
+    button{
+        font-size: 24px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menubar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .iconsmenu{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    footer .footericons{
+        gap: 10px;
+    }
+
+    footer a{
+        font-size: 18px;
+    }
+}
