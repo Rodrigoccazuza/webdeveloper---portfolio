@@ -234,8 +234,8 @@
                 <a href="https://github.com/Rodrigoccazuza"><img src="assets/home_assets/social_media/gitvector.svg" alt="GitHub"></a>
                 <a href="https://www.linkedin.com/in/rodrigo-de-carvalho-cazuza-6337331b8/"><img src="assets/home_assets/social_media/linkedin.svg" alt="LinkedIn"></a>
             </div>
-            <div class="col-md-6" class="contact">
-                <form action="submit_form.php" method="post" id="contactForm">
+            <div class="col-md-6 contact">
+                <form action="submit_form.php" method="POST" id="contactForm" onsubmit="sendMessage(event)">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form-control" placeholder="Your full name" required>
                     
@@ -243,7 +243,7 @@
                     <input type="email" name="email" id="email" class="form-control" placeholder="Your email address" required>
                     
                     <label for="services">Services you're interested in</label>
-                    <select id="services" class="form-select" required>
+                    <select id="services" name="services" class="form-select" required>
                         <option value="">Select a service</option>
                         <option value="web_design">Web Design</option>
                         <option value="ux_ui">UX/UI Design</option>
@@ -254,22 +254,23 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" class="form-control" rows="4" placeholder="Your message or project details" required></textarea>
                     
-                    <button class="btn mt-3" type="submit" class="btn btn-warning" onclick="sendMessage()">Send Message</button>
+                    <button class="btn mt-3 btn-warning" type="submit">Send Message</button>
                 </form>
-                
             </div>
-            <div class="result" id="result">
+            
+            <div class="result" id="result" style="display: none;">
                 <h2>Thank you for contacting us!</h2>
                 <p><strong>Name:</strong> <span id="resultname"></span></p>
                 <p><strong>Email:</strong> <span id="resultemail"></span></p>
-                <p><strong>Services</strong> <span id="resultservices"></span></p>  
+                <p><strong>Services:</strong> <span id="resultservices"></span></p>  
                 <p><strong>Message:</strong> <span id="resultmessage"></span></p>
-                
             </div>
-        </div>
+            
     </div>
 
-   <!-- Map Section -->
+  
+</div>
+     <!-- Map Section -->
    <div class="container">
     <div class="row mt-5">
         <div class="col-lg-8 mx-auto">
@@ -279,8 +280,6 @@
             </div>
         </div>
     </div>
-</div>
-    
 
     <!-- Footer -->
     <footer>
