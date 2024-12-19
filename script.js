@@ -17,21 +17,21 @@ else{
 /* form */ 
 
 
-function sendMessage() {
+function sendMessage(event) {
+    // Prevent default form submission
+    event.preventDefault();
+
     // Get form values
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const services = document.getElementById('services').value;
     const message = document.getElementById('message').value;
-  
-
 
     // Display the submitted data
     document.getElementById('resultname').textContent = name;
     document.getElementById('resultemail').textContent = email;
     document.getElementById('resultservices').textContent = services;
     document.getElementById('resultmessage').textContent = message;
-    
 
     // Hide the form and show the result
     document.getElementById('contactForm').style.display = 'none';
